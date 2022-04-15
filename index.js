@@ -78,12 +78,12 @@ const server = http.createServer(async (req, res) => {
             res.write(data);
             res.end()
         });
+
     } else if (req.url == "/estilos.css" && req.method === "GET") {
         res.setHeader('content-type', 'text/css;charset=utf8')
         const estilo = fs.readFileSync('estilos.css', 'utf8')
         res.statusCode = 200;
         res.end(estilo);
-
 
     } else {
         res.statusCode = 404;
@@ -92,7 +92,6 @@ const server = http.createServer(async (req, res) => {
         res.end(respuesta);
     };
 });
-
 
 server.listen(port, () => console.log('Conectado al puerto:', port));
 

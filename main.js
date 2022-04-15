@@ -1,6 +1,5 @@
 let url = "http://localhost:3000/cancion";
 
-
 let canciones = [];
 
 window.onload = () => {
